@@ -1,6 +1,6 @@
 (function() {
   (function(math, $) {
-    var $body, $bottom, $bottom_menu, $bottom_menu_img, $bottom_menu_shadow, $bottom_under_menu, $controller_box, $controller_box_close, $controller_top, $fade, $header, $height, $iframe, $logo_h2, $logo_img, $logo_play, $logo_play_bottom, $main, $resize, $width, $window, exports, getPhi, getSize, setSize, setStyle;
+    var $body, $bottom, $bottom_menu, $bottom_menu_img, $bottom_menu_shadow, $bottom_under_menu, $controller_box, $controller_box_close, $controller_top, $fade, $header, $header_share, $height, $iframe, $logo_h2, $logo_img, $logo_play, $logo_play_bottom, $main, $mid, $resize, $width, $window, exports, getPhi, getSize, setSize, setStyle;
     exports = this;
     exports.main = {};
     $resize = false;
@@ -9,6 +9,7 @@
     $width = $body.width();
     $window = $(window);
     $header = $('header');
+    $header_share = $('header .share');
     $logo_img = $('img.logo');
     $logo_h2 = $('h2.logo');
     $logo_play = $('.main img.logo-play');
@@ -16,6 +17,7 @@
     $iframe = $('iframe');
     $main = $('div.main');
     $bottom = $('div.bottom');
+    $mid = $('.mid');
     $bottom_menu = $('div.bottom > div.bottom_menu');
     $bottom_under_menu = $('div.bottom > div.bottom_menu > div.menu');
     $bottom_menu_shadow = $('div.bottom > div.bottom_menu > div.menu > div.shadow');
@@ -62,6 +64,7 @@
       main_height = height / math_long + height / math_short / math_short + header_height / math_short;
       setSize($main, main_height, 'height');
       setSize($bottom, height - (main_height + 1), 'height');
+      setSize($mid, main_height, 'height');
       setStyle($logo_h2, main_height / math_long - getPhi(getPhi(getPhi(main_height / math_short, 'short'), 'short'), 'short'), 'top');
       setStyle($logo_h2, -1 * getSize($logo_h2, 'height') / 2, 'margin-top');
       setSize($logo_img, getPhi(getPhi(width, 'long'), 'short'), 'width');
@@ -95,20 +98,6 @@
       setStyle($controller_top, header_height, 'margin-top');
     };
     main.init($height, $width);
-    $logo_play.click(function() {
-      $iframe.attr("src", "/skrillex").load(function() {
-        $body.addClass("play");
-        location.hash = "/skrillex";
-        return $(this).fadeIn("slow");
-      });
-    });
-    $logo_play_bottom.click(function() {
-      $iframe.attr("src", "/taylor_swift").load(function() {
-        $body.addClass("play");
-        location.hash = "/taylor_swift";
-        return $(this).fadeIn("slow");
-      });
-    });
     $controller_box_close.click(function() {
       return $iframe.fadeOut(function() {
         $body.removeClass("play");

@@ -87,6 +87,9 @@ img.logo {
   margin-left: 0px;
   opacity: 1; }
 
+.yakumo img.logo {
+  max-width: 350.248px; }
+
 div.shadow {
   width: 100%;
   height: 100%;
@@ -145,7 +148,7 @@ div.bottom_menu {
     div.bottom_menu div.menu.edge {
       border-top: 1px solid rgba(255, 255, 255, 0.855); } }
 
-div.bottom {
+div.bottom, div.mid {
   position: relative;
   bottom: 0px;
   width: 100%;
@@ -154,33 +157,33 @@ div.bottom {
   /* display: -ms-flex */
   /* display: -o-flex */
   border-top: 1px solid rgba(255, 255, 255, 0.618); }
-  div.bottom div.main {
+  div.bottom div.main, div.mid div.main {
     background: url(../images/taylor_swift.jpg) no-repeat center center fixed; }
-  div.bottom div.menu.edge {
+  div.bottom div.menu.edge, div.mid div.menu.edge {
     border-right: none; }
-  div.bottom div.menu {
+  div.bottom div.menu, div.mid div.menu {
     width: 100%;
     background-size: cover !important;
     background-position: 50%;
     border-right: 1px solid rgba(255, 255, 255, 0.855); }
-    div.bottom div.menu div.shadow {
+    div.bottom div.menu div.shadow, div.mid div.menu div.shadow {
       position: fixed;
       font-family: "Roboto", sans-serif;
       color: rgba(255, 255, 255, 0.855);
       font-weight: 100; }
-      div.bottom div.menu div.shadow p {
+      div.bottom div.menu div.shadow p, div.mid div.menu div.shadow p {
         margin: 0px;
         text-align: center;
         font-size: 25px;
         cursor: default; }
-  div.bottom div.menu.glasses {
+  div.bottom div.menu.glasses, div.mid div.menu.glasses {
     background: url(../images/try.jpg); }
-    div.bottom div.menu.glasses div.shadow {
+    div.bottom div.menu.glasses div.shadow, div.mid div.menu.glasses div.shadow {
       background-color: rgba(0, 0, 0, 0.145);
       position: absolute; }
-  div.bottom div.menu.phone {
+  div.bottom div.menu.phone, div.mid div.menu.phone {
     background: url(../images/photo.jpg); }
-    div.bottom div.menu.phone div.shadow {
+    div.bottom div.menu.phone div.shadow, div.mid div.menu.phone div.shadow {
       background-color: rgba(0, 0, 0, 0.145);
       position: absolute; }
 
@@ -242,3 +245,33 @@ div.controller div.close {
   margin-bottom: 0px;
   margin-left: -1px;
   cursor: pointer; }
+
+.share-panel {
+  position: fixed;
+  width: 100%;
+  display: none; }
+
+body.share .menu.share {
+  opacity: 1;
+  background-image: url(../images/share2.svg);
+  background-color: rgba(255, 255, 255, 0.855);
+  z-index: 1; }
+
+body.share .share-panel {
+  display: block;
+  top: 42px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.855); }
+
+div.sync div.main {
+  background: url(../images/sync.jpg) no-repeat center center fixed; }
+
+div.mnml div.main {
+  background: url(../images/mnml.jpg) no-repeat center center fixed; }
+
+div.trim div.main {
+  background: url(../images/trim.jpg) no-repeat center center fixed; }
+
+.jp {
+  font-family: 'Noto Sans Japanese', serif !important;
+  font-size: 14px !important; }

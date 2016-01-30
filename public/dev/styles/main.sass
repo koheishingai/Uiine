@@ -91,6 +91,9 @@ img.logo
   max-width: 237.248px
   margin-left: 0px
   opacity: 1
+
+.yakumo img.logo
+  max-width: 350.248px;
   
 div.shadow
   width: 100%
@@ -154,7 +157,7 @@ div.bottom_menu
     div.menu.edge
       border-top: 1px solid rgba(255, 255, 255, 0.855)
 
-div.bottom
+div.bottom, div.mid
   position: relative
   bottom: 0px
   width: 100%
@@ -260,4 +263,38 @@ div.controller div.close
   margin-bottom: 0px
   margin-left: -1px
   cursor: pointer
+  
+.share-panel
+  position: fixed
+  width: 100%
+  display: none
+  
+body.share
 
+  .menu.share
+    opacity: 1
+    background-image: url(../images/share2.svg)
+    background-color: rgba(255,255,255,.855);
+    z-index: 1
+
+  .share-panel
+    display: block
+    top: 42px
+    height: 100%
+    background: rgba(255,255,255,.855)
+    
+div.sync
+  div.main
+    background: url(../images/sync.jpg) no-repeat center center fixed
+
+div.mnml
+  div.main
+    background: url(../images/mnml.jpg) no-repeat center center fixed
+
+div.trim
+  div.main
+    background: url(../images/trim.jpg) no-repeat center center fixed
+
+.jp
+  font-family: 'Noto Sans Japanese', serif !important
+  font-size: 14px !important

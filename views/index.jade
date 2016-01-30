@@ -2,7 +2,7 @@ doctype html
 html
   head
     meta(charset="utf-8")
-    title= "Sync"
+    title= "Uiine"
     meta(http-equiv="X-UA-Compatible", content="IE=EmulateIE7, IE=9")
     meta(name="viewport", content="width=device-width, initial-scale=1")
     link(rel="stylesheet", href="./styles/main.css")
@@ -16,41 +16,59 @@ html
       div.main
         div.shadow.fade
           img.logo.fade(src="./images/logo.png")
-          h2.logo.fade(data='main.sub-title')
-                                         span 
-                                           a(href="http://www.skrillex.com/" target="_blank")= "Skrillex"
-                                         |  + 
-                                         span
-                                           a(href="https://www.youtube.com/user/fracionado" target="_blank")= "Fracionado"
+          h2.logo.fade(data='main.sub-title') Artistic Transitions
           // a.fade(href="/skrillex")
           img.logo-play(src="./images/play.svg")
           img.logo-more(src="./images/more.svg")
           audio#logo-audio.logo(src="./sounds/logo-wrap.mp3", controls, preload)
-      div.bottom
+      div.mid.yakumo
         div.main
           div.shadow.fade
-            img.logo.fade(src="./images/logo.png")
-            h2.logo.fade(data='main.sub-title')
-                                           span
-                                             a(href="http://taylorswift.com/" target="_blank")= "Taylor Swift"
-                                           |  +  
-                                           span
-                                             a(href="https://www.youtube.com/user/TannerPatrick" target="_blank")= "Tanner Patrick"
+            img.logo.fade(src="./images/yakumo.png")
+            h2.logo.fade(data='main.sub-title') Japanese Products
+            // a.fade(href="/taylor_swift")
+            img.logo-play.fade(src="./images/play.svg")
+            img.logo-more(src="./images/more.svg")
+            // audio#logo-audio.logo(src="./sounds/logo-wrap.mp3", controls, preload)
+      div.mid.sync
+        div.main
+          div.shadow.fade
+            img.logo.fade(src="./images/sync.png")
+            h2.logo.fade(data='main.sub-title') At the same time
+            // a.fade(href="/taylor_swift")
+            img.logo-play.fade(src="./images/play.svg")
+            img.logo-more(src="./images/more.svg")
+            // audio#logo-audio.logo(src="./sounds/logo-wrap.mp3", controls, preload)
+      div.mid.mnml
+        div.main
+          div.shadow.fade
+            img.logo.fade(src="./images/mnml.png")
+            h2.logo.fade.jp(data='main.sub-title') 海外動画の翻訳
+            // a.fade(href="/taylor_swift")
+            img.logo-play.fade(src="./images/play.svg")
+            img.logo-more(src="./images/more.svg")
+            // audio#logo-audio.logo(src="./sounds/logo-wrap.mp3", controls, preload)
+      div.bottom.trim
+        div.main
+          div.shadow.fade
+            img.logo.fade(src="./images/trim.png")
+            h2.logo.fade(data='main.sub-title') Song Snapshots
             // a.fade(href="/taylor_swift")
             img.logo-play.fade(src="./images/play.svg")
             img.logo-more(src="./images/more.svg")
             // audio#logo-audio.logo(src="./sounds/logo-wrap.mp3", controls, preload)
         div.bottom_menu
-          div.menu.phone
+          div.menu.phone(onClick="window.open('https://www.instagram.com/uiine.tokyo/', '_blank')")
             div.shadow.fade
               // p= "About Sync"
               img.bottom_logo.fade(src="./images/about.png")
-          div.menu.glasses.edge
+          div.menu.glasses.edge(onClick="window.open('https://www.youtube.com/channel/UCLqASnyyGFLZeFYj6Cr9ntg', '_blank')")
             div.shadow.fade
               // p= "Try Sync"
               img.bottom_logo.fade(src="./images/try.png")
       div.controller
         div.close.top
+      div.share-panel
       script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
       script(src="./scripts/math.min.js")
       script(src="./scripts/lang.js")

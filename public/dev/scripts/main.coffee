@@ -13,6 +13,7 @@ do (math, $) ->
   $window = $(window)
 
   $header = $('header')
+  $header_share = $('header .share')
   $logo_img = $('img.logo')
   $logo_h2 = $('h2.logo')
   $logo_play = $('.main img.logo-play')
@@ -22,6 +23,7 @@ do (math, $) ->
   
   $main = $('div.main')
   $bottom = $('div.bottom')
+  $mid = $('.mid')
   $bottom_menu = $('div.bottom > div.bottom_menu')
   $bottom_under_menu = $('div.bottom > div.bottom_menu > div.menu')
   $bottom_menu_shadow = $('div.bottom > div.bottom_menu > div.menu > div.shadow')
@@ -74,6 +76,8 @@ do (math, $) ->
     setSize $main, main_height, 'height'
     # set bottom 
     setSize $bottom, height - (main_height + 1), 'height'
+    # set mid 
+    setSize $mid, main_height, 'height'
     # set h2.logo
     setStyle $logo_h2, main_height / math_long - getPhi(getPhi(getPhi(main_height / math_short, 'short'), 'short'), 'short'), 'top'
     setStyle $logo_h2, -1 * getSize($logo_h2, 'height')/2, 'margin-top'
@@ -121,25 +125,28 @@ do (math, $) ->
   main.init $height, $width
   
   # temp...
-  $logo_play.click ->
-    $iframe.attr("src", "/skrillex").load ->
-      $body.addClass "play"
-      location.hash = "/skrillex"
-      $(this).fadeIn("slow")
-    return
+  #$logo_play.click ->
+  #  $iframe.attr("src", "/skrillex").load ->
+  #    $body.addClass "play"
+  #    location.hash = "/skrillex"
+  #    $(this).fadeIn("slow")
+  #  return
     
-  $logo_play_bottom.click ->
-    $iframe.attr("src", "/taylor_swift").load ->
-      $body.addClass "play"
-      location.hash = "/taylor_swift"
-      $(this).fadeIn("slow")
-    return
+  #$logo_play_bottom.click ->
+  #  $iframe.attr("src", "/taylor_swift").load ->
+  #    $body.addClass "play"
+  #    location.hash = "/taylor_swift"
+  #    $(this).fadeIn("slow")
+  #  return
     
   $controller_box_close.click ->
     $iframe.fadeOut ->
       $body.removeClass "play"
       $(this).contents().find("body").html('');
-      location.hash = ""  
+      location.hash = ""
+      
+  #$header_share.click ->
+  #  $body.toggleClass("share")
 
   $window.resize ->
     if $resize != false
